@@ -14,14 +14,14 @@ const sendEmail = async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "",
-      pass: "",
+      user: process.env.SMTP_EMAIL, // Your Gmail email address
+      pass: process.env.SMTP_PASS, // Your Gmail password or an application-specific password
     },
   });
 
   const mailOptions = {
     from: email,
-    to: "",
+    to: email, // Use the recipient's email address from the request body
     subject: subject,
     html: `<b>Name: </b> ${name}<br/>
       <b>Message is</b> ${message}`,
