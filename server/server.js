@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 const sendEmail = async (req, res) => {
-  const { email, subject, message, name } = req.body;
+  const { email, subject, message, name, phone } = req.body;
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -20,11 +20,16 @@ const sendEmail = async (req, res) => {
   });
 
   const mailOptions = {
-    from: email,
-    to: email, // Use the recipient's email address from the request body
-    subject: subject,
-    html: `<b>Name: </b> ${name}<br/>
-      <b>Message is</b> ${message}`,
+    from: email, // Use your Gmail email address here
+    to: process.env.SMTP_EMAIL, // Use the recipient's email address from the request body
+    subject: `You have Email from: ${email} subject is ${subject}`,
+    html: `<b>Company Name: </b> ${name}
+    <br/>
+    <b>Company Email: </b> ${email}
+    <br/>
+    <b>Phone number: </b> ${phone}
+    <br/>
+    <b>Description: </b> ${message}`,
   };
 
   await transporter.sendMail(mailOptions);

@@ -241,9 +241,6 @@
                   </div>
                 </div>
               </div>
-              <a href="javascript:void(0)" class="main-btn btn-hover"
-                >View More</a
-              >
             </div>
           </div>
         </div>
@@ -462,12 +459,7 @@
             </div>
           </div>
         </div>
-        <form
-          action="assets/php/contact.php"
-          method="POST"
-          id="contact-form"
-          class="contact-form"
-        >
+        <form method="POST" id="contact-form" class="contact-form">
           <div class="row">
             <div class="col-md-6">
               <div class="single-input">
@@ -477,6 +469,7 @@
                   id="name"
                   class="form-input"
                   placeholder="Your Name"
+                  required
                 />
               </div>
             </div>
@@ -488,6 +481,7 @@
                   id="email"
                   class="form-input"
                   placeholder="Your Email"
+                  required
                 />
               </div>
             </div>
@@ -499,18 +493,27 @@
                   id="number"
                   class="form-input"
                   placeholder="Contact Number"
+                  required
                 />
               </div>
             </div>
             <div class="col-md-6">
               <div class="single-input">
-                <input
+                <select
                   type="text"
                   name="subject"
                   id="subject"
                   class="form-input"
-                  placeholder="Your Subject"
-                />
+                  required
+                >
+                  <option value="">Category...</option>
+                  <option value="Plumbing">Plumbing</option>
+                  <option value="Electrical">Electrical</option>
+                  <option value="Appliance">Appliance</option>
+                  <option value="HVAC">HVAC</option>
+                  <option value="General-Handyman">General Handyman</option>
+                  <option value="Locksmith">Locksmith</option>
+                </select>
               </div>
             </div>
             <div class="col-md-12">
@@ -531,6 +534,9 @@
                   Submit Message
                 </button>
               </div>
+            </div>
+            <div id="success-message" style="display: none">
+              Message sent successfully!
             </div>
           </div>
         </form>
@@ -599,8 +605,7 @@
                   <li><a href="">Electrical </a></li>
                   <li><a href="">Appliance</a></li>
                   <li><a href="">HVAC</a></li>
-                  <li><a href="">UI/UX design</a></li>
-                  <li><a href="">General Handyman </a></li>
+                  <li><a href="">General Handyman</a></li>
                   <li><a href="">Locksmith </a></li>
                 </ul>
               </div>
@@ -655,5 +660,60 @@
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/polifill.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent the default form submission
+
+          // Get the form data
+          const email = document.getElementById("email").value;
+          const name = document.getElementById("name").value;
+          const number = document.getElementById("number").value;
+          const subject = document.getElementById("subject").value;
+          const message = document.getElementById("message").value;
+
+          // Define the URL where you want to send the data
+          const url = "http://localhost:5000/api/sendEmail"; // Replace with your server's endpoint
+
+          // Make a Fetch request to send the data
+          fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email,
+              name,
+              phone: number,
+              subject,
+              message,
+            }),
+          })
+            .then((response) => {
+              if (response.ok) {
+                // Request was successful
+                return response.text(); // You can use response.json() if the server responds with JSON
+              } else {
+                // Request failed
+                throw new Error("Network response was not ok");
+              }
+            })
+            .then((data) => {
+              // Handle the response data here (if needed)
+              if (data.success) {
+                document.getElementById("success-message").style.display =
+                  "block";
+              }
+              // You can perform any further actions like showing a success message or redirecting the user.
+            })
+            .catch((error) => {
+              // Handle any errors that occurred during the fetch
+              console.error("Fetch error:", error);
+              // You can display an error message or handle the error as needed.
+            });
+        });
+    </script>
   </body>
 </html>

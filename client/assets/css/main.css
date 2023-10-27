@@ -2286,3 +2286,15 @@ p {
 .pb-225 {
   padding-bottom: 225px;
 }
+
+select {
+  width: 100%;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 0px 39px #f2f4f9;
+  transition: all 0.3s ease-out 0s;
+  padding: 18px 30px;
+  color: #6b6f92;
+  line-height: 1;
+  border: 1px solid transparent;
+}
