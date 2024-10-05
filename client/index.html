@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>HAWAMDA Maintenance - Professional Maintenance Services</title>
-    <meta name="description" content="HAWAMDA Maintenance provides top-quality maintenance services to businesses of all sizes, including plumbing, electrical, HVAC, and general handyman work." />
+    <title>HAWAMDA MAINTENANCE</title>
+    <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="./assets/img/logo/handyman_white.png">
 
-    <!-- Preload for fonts -->
-    <link rel="preload" href="assets/fonts/LineIcons.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <!-- Place favicon.ico in the root directory -->
 
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="assets/css/bootstrap-5.0.0-beta2.min.css" />
@@ -17,10 +16,21 @@
     <link rel="stylesheet" href="assets/css/tiny-slider.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      .small-logo {
+        width: 100px; /* Adjust the width to your desired size */
+        height: auto; /* This maintains the aspect ratio */
+      }
+      .medium-logo {
+        width: 200px; /* Adjust the width to your desired size */
+        height: auto; /* This maintains the aspect ratio */
+      }
+    </style>
+  
   </head>
   <body>
     <!-- ========================= preloader start ========================= -->
-    <div class="preloader" aria-label="Loading content">
+    <div class="preloader">
       <div class="loader">
         <div class="spinner">
           <div class="spinner-container">
@@ -44,9 +54,9 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-12">
-              <nav class="navbar navbar-expand-lg" role="navigation">
+              <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="index.html">
-                  <img class="small-logo" src="assets/img/logo/hawamda.png" alt="HAWAMDA Maintenance Logo" />
+                  <img class="small-logo" src="assets/img/logo/hawamda.png" alt="Logo" />
                 </a>
                 <button
                   class="navbar-toggler"
@@ -68,16 +78,16 @@
                 >
                   <ul id="nav" class="navbar-nav ms-auto">
                     <li class="nav-item">
-                      <a class="page-scroll active" href="#home" aria-label="Home">Home</a>
+                      <a class="page-scroll active" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="page-scroll" href="#about" aria-label="About">About</a>
+                      <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="page-scroll" href="#service" aria-label="Services">Services</a>
+                      <a class="page-scroll" href="#service">Services</a>
                     </li>
                     <li class="nav-item">
-                      <a class="page-scroll" href="#contact" aria-label="Request">Request</a>
+                      <a class="page-scroll" href="#contact">Request</a>
                     </li>
                   </ul>
                 </div>
@@ -100,14 +110,12 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="hero-content">
-              <span class="wow fadeInLeft" data-wow-delay=".2s" aria-label="Caring for Your Business, One Service at a Time">
-                Caring for Your Business, One Service at a Time
-              </span><br>
-              <span class="wow fadeInLeft" data-wow-delay=".2s">
-                <button type="button" class="main-btn btn-hover" aria-label="Request Service">
+              <span class="wow fadeInLeft" data-wow-delay=".2s"
+                >Caring for Your Business, One Service at a Time</span><br>
+               <span class="wow fadeInLeft" data-wow-delay=".2s"
+                ><button type="submit" class="main-btn btn-hover">
                   <a class="page-scroll" href="#contact" style="color: white;">Request Service</a>
-                </button>
-              </span>
+                </button></span>
             </div>
           </div>
           <div class="col-lg-6">
@@ -115,7 +123,6 @@
               <img
                 src="assets/img/logo/hawamda.png"
                 alt="Handyman with company name around him."
-                loading="lazy"
               />
             </div>
           </div>
@@ -123,14 +130,13 @@
       </div>
     </section>
     <!-- ========================= hero-section end ========================= -->
-
     <!-- ========================= about-section start ========================= -->
     <section id="about" class="about-section pt-150">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
             <div class="about-img mb-50">
-              <img src="assets/img/about/about-img.svg" alt="About HAWAMDA Maintenance" loading="lazy" />
+              <img src="assets/img/about/about-img.svg" alt="about" />
             </div>
           </div>
           <div class="col-lg-6">
@@ -155,7 +161,6 @@
                     data-bs-target="#collapseOne"
                     aria-expanded="true"
                     aria-controls="collapseOne"
-                    aria-label="What types of maintenance services do you offer?"
                   >
                     What types of maintenance services do you offer?
                   </button>
@@ -183,7 +188,6 @@
                     data-bs-target="#collapseTwo"
                     aria-expanded="false"
                     aria-controls="collapseTwo"
-                    aria-label="How can I request your services?"
                   >
                     How can I request your services?
                   </button>
@@ -210,9 +214,8 @@
                     data-bs-target="#collapseThree"
                     aria-expanded="false"
                     aria-controls="collapseThree"
-                    aria-label="Is your team experienced and reliable?"
                   >
-                    Is your team experienced and reliable?
+                    Is your team experienced and reliable??
                   </button>
                   <div
                     id="collapseThree"
@@ -250,11 +253,319 @@
         </div>
 
         <div class="row">
-          <!-- Service items here -->
+          <div class="col-xl-4 col-md-6">
+            <div class="single-service">
+              <div class="icon color-1">
+                <i class="lni lni-hammer"></i>
+              </div>
+              <div class="content">
+                <h3>Plumbing</h3>
+                <p>
+                  Plumbing is a crucial system that deals with the installation,
+                  and maintenance
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div class="single-service">
+              <div class="icon color-2">
+                <i class="lni lni-brush"></i>
+              </div>
+              <div class="content">
+                <h3>Electrical</h3>
+                <p>
+                  Electrical engineering is a field of engineering that deals
+                  with the study, and design.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div class="single-service">
+              <div class="icon color-3">
+                <i class="lni lni-pallet"></i>
+              </div>
+              <div class="content">
+                <h3>Applicance</h3>
+                <p>
+                  Appliances play a vital role in our daily lives, making
+                  household chores.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div class="single-service">
+              <div class="icon color-4">
+                <i class="lni lni-vector"></i>
+              </div>
+              <div class="content">
+                <h3>HVAC</h3>
+                <p>
+                  HVAC stands for Heating, Ventilation, and Air Conditioning.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div class="single-service">
+              <div class="icon color-4">
+                <i class="lni lni-vector"></i>
+              </div>
+              <div class="content">
+                <h3>Painting and Drywall Repair</h3>
+                <p>
+                  Freshen up your interior with our painting services, and say goodbye to unsightly wall damage with our expert drywall repair.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div class="single-service">
+              <div class="icon color-4">
+                <i class="lni lni-vector"></i>
+              </div>
+              <div class="content">
+                <h3>Carpentry Work</h3>
+                <p>
+                  Whether it's fixing a broken cabinet or installing custom shelves, our carpentry services add a touch of craftsmanship to your space.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+           <div class="single-service">
+            <div class="icon color-4">
+              <i class="lni lni-vector"></i>
+            </div>
+            <div class="content">
+              <h3>General Installations</h3>
+              <p>
+                  We install anything you desire, just ask!
+              </p>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </section>
     <!-- ========================= service-section end ========================= -->
+
+    <!-- ========================= counter-up-section start ========================= -->
+    <section class="counter-up-section pt-150">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="counter-up-content mb-50">
+              <div class="section-title mb-40">
+                <h1 class="mb-20 wow fadeInUp" data-wow-delay=".2s">
+                  Why do business with us?
+                </h1>
+                <p class="wow fadeInUp" data-wow-delay=".4s">
+                  For over 25 years, HAWAMDA MAINTENANCE has been providing top quality maintenance services to businesses of all sizes. We are a trusted partner for many businesses in the United States, and we take pride in delivering quality service and exceptional customer experience.
+                </p>
+              </div>
+              <div class="counter-up-wrapper">
+                <div class="row">
+                  <div class="col-lg-6 col-sm-6">
+                    <div class="single-counter">
+                      <div class="icon color-1">
+                        <i class="lni lni-emoji-smile"></i>
+                      </div>
+                      <div class="content">
+                        <h1
+                          id="secondo1"
+                          class="countup"
+                          cup-end="3642"
+                          cup-append=" "
+                        >
+                          3642
+                        </h1>
+                        <span>Happy clients</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-6">
+                    <div class="single-counter">
+                      <div class="icon color-2">
+                        <i class="lni lni-checkmark"></i>
+                      </div>
+                      <div class="content">
+                        <h1
+                          id="secondo2"
+                          class="countup"
+                          cup-end="5436"
+                          cup-append=" "
+                        >
+                          5436
+                        </h1>
+                        <span>Requests completed</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-6">
+                    <div class="single-counter">
+                      <div class="icon color-3">
+                        <i class="lni lni-world"></i>
+                      </div>
+                      <div class="content">
+                        <h1
+                          id="secondo3"
+                          class="countup"
+                          cup-end="64"
+                        >
+                          50
+                        </h1>
+                        <span>Years of combined experience</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-6">
+                    <div class="single-counter">
+                      <div class="icon color-4">
+                        <i class="lni lni-users"></i>
+                      </div>
+                      <div class="content">
+                        <h1
+                          id="secondo4"
+                          class="countup"
+                          cup-end="42"
+                          cup-append=" "
+                        >
+                          50+
+                        </h1>
+                        <span>Technicians in the Westchester County Area</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6">
+            <div class="counter-up-img mb-50">
+              <img src="assets/img/counter-up/counter-up-img.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================= counter-up-section end ========================= -->
+
+    <section id="contact" class="contact-section pt-120 pb-150">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xxl-5 col-xl-6 col-lg-7">
+            <div class="section-title text-center mb-60">
+              <h1
+                class="wow fadeInUp mb-20"
+                data-wow-delay=".2s"
+                style="
+                  visibility: visible;
+                  animation-delay: 0.2s;
+                  animation-name: fadeInUp;
+                "
+              >
+                Submit your request below
+              </h1>
+              <p
+                class="wow fadeInUp"
+                data-wow-delay=".4s"
+                style="
+                  visibility: visible;
+                  animation-delay: 0.4s;
+                  animation-name: fadeInUp;
+                "
+              >
+                Give us all the details and we'll contact you shortly.
+              </p>
+            </div>
+          </div>
+        </div>
+        <form method="POST" id="contact-form" class="contact-form">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="single-input">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form-input"
+                  placeholder="Company Name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="single-input">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-input"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="single-input">
+                <input
+                  type="text"
+                  name="number"
+                  id="number"
+                  class="form-input"
+                  placeholder="Contact Number"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="single-input">
+                <select
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  class="form-input"
+                  required
+                >
+                  <option value="">Category...</option>
+                  <option value="Plumbing">Plumbing</option>
+                  <option value="Electrical">Electrical</option>
+                  <option value="Appliance">Appliance</option>
+                  <option value="HVAC">HVAC</option>
+                  <option value="General-Handyman">General Handyman</option>
+                  <option value="Locksmith">Locksmith</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="single-input">
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="8"
+                  class="form-input"
+                  placeholder="Describe the issue here..."
+                  spellcheck="false"
+                ></textarea>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-btn text-center">
+                <button type="submit" class="main-btn btn-hover">
+                  Submit Request
+                </button>
+              </div>
+            </div>
+            <div id="success-message" style="display: none">
+              Message sent successfully!
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
 
     <!-- ========================= footer start ========================= -->
     <footer class="footer">
@@ -265,7 +576,7 @@
               <div class="footer-widget">
                 <div class="logo mb-35">
                   <a href="index.html">
-                    <img class="medium-logo" src="assets/img/logo/hawamda.png" alt="HAWAMDA Maintenance Logo" />
+                    <img class="medium-logo" src="assets/img/logo/hawamda.png" alt="" />
                   </a>
                 </div>
                 <p class="desc mb-35">
@@ -273,34 +584,85 @@
                 </p>
                 <ul class="socials">
                   <li>
-                    <a href="#" aria-label="Facebook">
+                    <a href="jvascript:void(0)">
                       <i class="lni lni-facebook-filled"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#" aria-label="Twitter">
+                    <a href="jvascript:void(0)">
                       <i class="lni lni-twitter-filled"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#" aria-label="Instagram">
+                    <a href="jvascript:void(0)">
                       <i class="lni lni-instagram-filled"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="#" aria-label="LinkedIn">
+                    <a href="jvascript:void(0)">
                       <i class="lni lni-linkedin-original"></i>
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <!-- Other footer content -->
+
+            <div class="col-xl-2 offset-xl-1 col-md-5 offset-md-1 col-sm-6">
+              <div class="footer-widget">
+                <h3>Link</h3>
+                <ul class="links">
+                  <li><a href="#Home">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#service">Services</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 col-sm-6">
+              <div class="footer-widget">
+                <h3>Services</h3>
+                <ul class="links">
+                  <li><a href="">Plumbing</a></li>
+                  <li><a href="">Electrical </a></li>
+                  <li><a href="">Appliance</a></li>
+                  <li><a href="">HVAC</a></li>
+                  <li><a href="">Painting and Drywall Repair</a></li>
+                  <li><a href="">Carpentry Work</a></li>
+                  <li><a href="">General Installations</a></li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+              <div class="footer-widget">
+                <h3>Contact</h3>
+                <ul>
+                  <li>+1 (321) 305-7727</li>
+                  <li>abe@hawamda.com</li>
+                  <li>United States of America</li>
+                </ul>
+                <div
+                  class="contact_map"
+                  style="width: 100%; height: 150px; margin-top: 25px"
+                >
+                  <div class="gmap_canvas">
+                    <iframe
+                      id="gmap_canvas"
+                      src="https://maps.google.com/maps?q=Mission%20District%2C%20San%20Francisco%2C%20CA%2C%20USA&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                      style="width: 100%"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="copy-right">
           <p>
-            Copyright © 2023 HAWAMDA MAINTENANCE Inc. All rights reserved.
+            Copyright © 2024 HAWAMDA MAINTENANCE Inc. All rights reserved.
           </p>
         </div>
       </div>
@@ -308,7 +670,7 @@
     <!-- ========================= footer end ========================= -->
 
     <!-- ========================= scroll-top ========================= -->
-    <a href="#" class="scroll-top btn-hover" aria-label="Scroll to top">
+    <a href="#" class="scroll-top btn-hover">
       <i class="lni lni-chevron-up"></i>
     </a>
 
